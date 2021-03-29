@@ -1,17 +1,17 @@
-{% extends "page.html" %}
+{% extends "base.html" %}
 
 {% block train %}
     <h2 align="center">Оформление каюты</h2>
-    <table>
-        <tr aria-colspan="2"><th>Цвет стен</th><th>Эмблема</th></tr>
+    <table align="center">
+        <tr aria-colspan="2" align="center"><th bgcolor="#C0C0C0">Цвет стен</th><th bgcolor="#C0C0C0">Эмблема</th></tr>
         {% if gender == "male" and age < 21 %}
-            <tr><td bgcolor="#c8eef9"></td><td><img src="/static/img/child.jpg"></td></tr>
+            <tr><td bgcolor="#c8eef9" width="50%"></td><td><img src="/static/img/child.jpg" width="50%"></td></tr>
         {% elif gender == "male" and age >= 21 %}
-            <tr><td bgcolor="blue"></td><td><img src="/static/img/adult.jpg"></td></tr>
+            <tr><td bgcolor="blue" width="50%"></td><td><img src="/static/img/adult.jpg" width="50%"></td></tr>
         {% elif gender == "female" and age < 21 %}
-            <tr><td bgcolor="pink"></td><td><img src="/static/img/child.jpg"></td></tr>
+            <tr><td bgcolor="pink" width="50%"></td><td><img src="/static/img/child.jpg" width="50%"></td></tr>
         {% elif gender == "female" and age >= 21 %}
-            <tr><td bgcolor="red"></td><td><img src="/static/img/adult.jpg"></td></tr>
+            <tr><td bgcolor="red" width="50%"></td><td><img src="/static/img/adult.jpg" width="50%"></td></tr>
         {% endif %}
     </table>
 {% endblock %}
